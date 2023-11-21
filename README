@@ -1,0 +1,22 @@
+Creates a customized Nasuni PoC Plan document from a builtin template using a mapping file in the mounted directory.
+
+docker run -v \<folder-with-desired-mapping-csv>:/data [-e POC_DOC_TYPE=naa] certl/python-prepare-poc-document:stable
+
+Environment variable POC_DOC_TYPE can be used to enable NAA PoC document creation instead of default Nasuni core document
+
+Mapping file contents:
+
+\<CUSTOMER NAME>;
+\<DATE>;
+\<SA NAME>;
+\<SA EMAIL>;
+\<SA TEL>;
+\<RSM NAME>;
+\<RSM EMAIL>;
+\<RSM TEL>;
+\<Partner>;
+\<OBJECT STORE>;
+\<\# of appliances>;
+\<\# of locations>;
+
+CSV delimiter is ‚;‘
